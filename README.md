@@ -1,4 +1,4 @@
-#Sparkify Data Warehouse
+# Sparkify Data Warehouse
 
 The enclosed code creates a Postgresql database through an Amazon Web Services (AWS) account. A Redshift cluster is created, and assigned a read-only identity and access management (IAM) role for generating information schema from two datasets in an S3 bucket. The following are user-required parameters that should be populated in the **dwh.cfg** file:
 
