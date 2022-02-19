@@ -3,6 +3,7 @@
 The enclosed code creates a Postgresql database through an Amazon Web Services (AWS) account. A Redshift cluster is created, and assigned a read-only identity and access management (IAM) role for generating information schema from two datasets in an S3 bucket. The following are user-required parameters that should be populated in the **dwh.cfg** file:
 
 **CLUSTER**
+
 HOST='redshift_endpoint'
 DB_NAME='db_name'
 DB_USER= 'db_user'
@@ -17,7 +18,7 @@ LOG_DATA='s3://udacity-dend/log_data'
 LOG_JSONPATH='s3://udacity-dend/log_json_path.json'
 SONG_DATA='s3://udacity-dend/song_data'
 
-#Staging Tables
+# Staging Tables
 The two datasets, LOG_DATA and SONG_DATA, are json files which are copied into separate tables called **staging_events** and **staging_songs**, respectively. 
 
 **Staging_events**
@@ -27,7 +28,7 @@ This table is comprised of the following fields: artistName, auth, firstName, ge
 This table is comprised of the following fields:num_songs, artist_id, artist_latitude, artist_longitude, artist_location, artist_name, song_id, title, duration, year
 
 
-#Star Schema
+# Star Schema
 The staging tables are used for generating the **songplays**, **users**, **songs**, **artists**, and **time** tables.
 
 **FACT TABLE**
