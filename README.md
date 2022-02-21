@@ -48,7 +48,7 @@ This dimension table is composed of artist_id, name, location, latitutde, longit
 **time**
 This dimension table is composed of timestamp, hour, day, week, month, year, weekday
 
-#ETL Pipeline
+# ETL Pipeline
 The dimension tables are constructed using the staging_events and staging_songs tables. Specifically,
 users and time are constructed using the staging_events table, whereas songs and artists are constructed from song_data. Both the **staging_events** and **staging_songs** table share the artist name field, which is used to inner join the two tables and insert data into the **songplays** table. 
 
